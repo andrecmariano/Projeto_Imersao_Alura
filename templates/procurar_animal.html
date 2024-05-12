@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Busca de Animal</title>
+  <link rel="stylesheet" href="../static/style.css">
+</head>
+<body>
+  <h1>Busca de Animal</h1>
+  <form action="/procurar-animal" method="POST">
+    <label for="cidade">Cidade:</label>
+    <select name="cidade">
+      {% for cidade in cidades %}
+        <option value="{{ cidade }}">{{ cidade }}</option>
+      {% endfor %}
+    </select>
+  
+    <label for="tipo">Tipo:</label>
+    <select name="tipo">
+      <option value="gato">Gato</option>
+      <option value="cachorro">Cachorro</option>
+      <option value="cavalo">Cavalo</option>
+      <option value="outro">Outro</option>
+    </select>
+  
+    <label for="porte">Porte:</label>
+    <select name="porte">
+      <option value="pequeno">Pequeno</option>
+      <option value="medio">Médio</option>
+      <option value="grande">Grande</option>
+    </select>
+  
+    <label for="pelagem">Pelagem:</label>
+    <select name="pelagem">
+      <option value="curta">Curta</option>
+      <option value="media">Média</option>
+      <option value="longa">Longa</option>
+    </select>
+  
+    <label for="cor">Cor:</label>
+    <select name="cor">
+      <option value="branco">Branco</option>
+      <option value="bicolor">Bicolor</option>
+      <option value="cinza">Cinza</option>
+      <option value="escaminha">Escaminha</option>
+      <option value="fulvo">Fulvo</option>
+      <option value="laranja">Laranja</option>
+      <option value="marrom">Marrom</option>
+      <option value="preto">Preto</option>
+      <option value="rajado/tigrado">Rajado/Tigrado</option>
+      <option value="tricolor">Tricolor</option>
+      <option value="outros">Outros</option>
+    </select>
+  
+    <label for="raca">Raça:</label>
+    <input type="text" name="raca">
+  
+    <button type="submit">Enviar informações</button>
+  </form>
+
+  <br><br>
+  <a href="index.html">
+    <button type="button">Voltar</button>
+    </a>
+</body>
+</html>

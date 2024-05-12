@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Cadastro de Animal</title>
+  <link rel="stylesheet" href="../static/style.css">
+</head>
+<body>
+  <h1>Cadastro de Animal</h1>
+  <form action="/cadastrar-animal" method="post" enctype="multipart/form-data">
+    <label for="cidade">Cidade:</label>
+    <select name="cidade">
+      {% for cidade in cidades %}
+        <option value="{{ cidade }}">{{ cidade }}</option>
+      {% endfor %}
+    </select>
+    <br>
+    <label for="imagem">Imagem do Animal:</label>
+    <input type="file" name="imagem" accept="image/*">
+    <br>
+    <button type="submit">Cadastrar</button>
+  </form>
+  <br><br>
+  <a href="index.html">
+  <button type="button">Voltar</button>
+  </a>
+</body>
+</html>
